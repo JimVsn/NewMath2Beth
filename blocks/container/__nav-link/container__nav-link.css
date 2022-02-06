@@ -1,0 +1,28 @@
+.container__nav-link {
+  border-bottom: 2px black solid;
+  text-decoration: none;
+  color: black;
+  font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  transition: 0.3s;
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+.container__nav-link:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.container__nav-link:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.container__nav-link:hover:after {
+  content: "\27A4";
+}

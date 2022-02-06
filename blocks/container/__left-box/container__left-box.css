@@ -1,0 +1,6 @@
+.container__left-box {
+  border: 1px red solid;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

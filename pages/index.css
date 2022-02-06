@@ -1,0 +1,20 @@
+@import url(../vendor/normalize.css);
+@import url(../blocks/body/body.css);
+@import url(../blocks/page/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__title/header__title.css);
+@import url(../blocks/header/__title-span/header__title-span.css);
+@import url(../blocks/header/__text/header__text.css);
+
+@import url(../blocks/container/container.css);
+@import url(../blocks/container/__left-section/container__left-section.css);
+@import url(../blocks/container/__right-section/container__right-section.css);
+@import url(../blocks/container/__title/container__title.css);
+@import url(../blocks/container/__left-box/container__left-box.css);
+@import url(../blocks/container/__right-box/container__right-box.css);
+@import url(../blocks/container/__menu/container__menu.css);
+@import url(../blocks/container/__left-choice/container__left-choise.css);
+@import url(../blocks/container/__nav-link/container__nav-link.css);
+@import url(../blocks/container/__choise-title/container__choise-title.css);
+@import url(../blocks/container/__choise-input/container__choise-input.css);
+@import url(../blocks/container/__choise-input/_select/container__choise-input_select.css);

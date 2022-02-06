@@ -1,0 +1,8 @@
+.container__menu {
+  border: 2px black solid;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 269px;
+  
+}
