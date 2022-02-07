@@ -1,6 +1,6 @@
-.container__right-section {
-  width: 45%;
+.container__right-choice {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 43%;
 }

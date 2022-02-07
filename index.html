@@ -11,8 +11,9 @@
 
 <body class="body">
   <div class="page">
-    <header class="header">
-        <h1 class="header__title">Math2<span class="header__title-span">Beth</span></h1>
+    <section class="content">
+    <header class="header">   
+        <h1 class="header__title">Math2<span class="header__title-span">Bet</span></h1>
         <h2 class="header__text">Математический расчет ставок на футбол</h2>
     </header>
 
@@ -65,13 +66,51 @@
       <div class="container__right-section">
         <h2 class="container__title">Away</h2>
         <div class="container__right-box">
-            
+          <div class="container__right-choice">
+            <p class="container__choise-title container__choise-title_mod">*Кол-во забитых голов команды в последних 5 домашних матчах</p>
+            <input id="homeScored" name="homeScored" type="text" class="container__choise-input" placeholder="Ввести">
+            <p class="container__choise-title container__choise-title_mod">*Кол-во пропущенных голов команды в последних 5 домашних матчах</p>
+            <input id="homeScored" name="homeScored" type="text" class="container__choise-input" placeholder="Ввести">
+            <p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых игроков атакующей линии</p>
+            <select name="selectAttackAway" id="selectvalue" class="container__choise-input container__choise-input_select">
+            <option selected value="0">Выберите</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            </select>
+
+            <p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых игроков линии защиты</p>
+            <select name="selectDefAway" id="selectvalue" class="container__choise-input container__choise-input_select">
+            <option selected value="0">Выберите</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            </select>
+
+            <p class="container__choise-title container__choise-title_mod">*Класс команды</p>
+            <select name="teamClassAway" id="selectvalue" class="container__choise-input container__choise-input_select">
+            <option selected value="1">Выберите</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+          </div>
+          <div class="container__market-menu">
+            <!--<img src="" class="container__banner">-->
+            <iframe class="container__video" src="https://www.youtube.com/embed/HW9gZ-LyAJI" title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+
+          </div>
         </div>
         
           
     </div>
     </section>
     <main class="content">
+    </section>
       
     
     
