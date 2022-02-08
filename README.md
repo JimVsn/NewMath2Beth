@@ -16,4 +16,4 @@
 
 **Ссылка на проект**
 
-Ознакомиться с проектом можно по [ссылке](https://jimvsn.github.io/math2beth/)
+Ознакомиться с проектом можно по [ссылке](https://jimvsn.github.io/NewMath2Beth/)
