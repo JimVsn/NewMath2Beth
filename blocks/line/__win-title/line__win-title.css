@@ -1,0 +1,9 @@
+.line__win-title {
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-size: 45px;
+  line-height: 48px;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  color: black;
+}

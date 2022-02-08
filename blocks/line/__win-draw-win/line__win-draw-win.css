@@ -1,0 +1,7 @@
+.line__win-draw-win {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+}

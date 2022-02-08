@@ -1,0 +1,25 @@
+.math-button {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  font-family:'Zantroke', Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 43px;
+  font-weight: 900;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  color:#e2d1c3;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px 2px blue;
+  transition: 0.3s;
+}
+
+.math-button:hover {
+  opacity: 0.3;
+  transition: 0.3s;
+  cursor: pointer;
+}

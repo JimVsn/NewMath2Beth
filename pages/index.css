@@ -1,4 +1,5 @@
 @import url(../vendor/normalize.css);
+@import url(../vendor/fonts/font.css);
 @import url(../blocks/body/body.css);
 @import url(../blocks/page/page.css);
 @import url(../blocks/content/content.css);
@@ -24,3 +25,25 @@
 @import url(../blocks/container/__choise-title/_mod/container__choise-title_mod.css);
 @import url(../blocks/container/__banner/container__banner.css);
 @import url(../blocks/container/__video/container__video.css);
+
+@import url(../blocks/line/line.css);
+@import url(../blocks/math-button/math-button.css);
+@import url(../blocks/line/__content/line__content.css);
+@import url(../blocks/line/__result-box/line__result-box.css);
+@import url(../blocks/line/__result-text/line__result-text.css);
+@import url(../blocks/line/__result-goalscore/line__result-goalscore.css);
+@import url(../blocks/line/__win-draw-win/line__win-draw-win.css);
+@import url(../blocks/line/__win-box/line__win-box.css);
+@import url(../blocks/line/__win-title/line__win-title.css);
+@import url(../blocks/line/__win-persent/line__win-persent.css);
+
+@import url(../blocks/line/__persent__container/line__persent-container.css);
+@import url(../blocks/line/__persent-box/line__persent-box.css);
+@import url(../blocks/line/__paragraph/line__paragraph.css);
+@import url(../blocks/line/__box-line/line__box-line.css);
+@import url(../blocks/line/__box-line-text/line__box-line-text.css);
+@import url(../blocks/line/__box-line-box/line__box-line-box.css);
+@import url(../blocks/line/__box-line-text/_border/line__box-line-text_border.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__text/footer__text.css);

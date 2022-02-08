@@ -11,10 +11,10 @@
 
 <body class="body">
   <div class="page">
-    <section class="content">
+    <main class="content">
     <header class="header">   
         <h1 class="header__title">Math2<span class="header__title-span">Bet</span></h1>
-        <h2 class="header__text">Математический расчет ставок на футбол</h2>
+        <h2 class="header__text">Математический расчет исходов на футбол</h2>
     </header>
 
     <section class="container">
@@ -33,7 +33,7 @@
             <input id="homeScored" name="homeScored" type="text" class="container__choise-input" placeholder="Ввести">
             <p class="container__choise-title">*Кол-во пропущенных голов команды в последних 5 домашних матчах</p>
             <input id="homeScored" name="homeScored" type="text" class="container__choise-input" placeholder="Ввести">
-            <p class="container__choise-title">*Кол-во отсутствующих ключевых игроков атакующей линии</p>
+            <p class="container__choise-title">*Кол-во отсутствующих ключевых&nbsp;игроков атакующей линии</p>
             <select name="selectAttackHome" id="selectvalue" class="container__choise-input container__choise-input_select">
             <option selected value="0">Выберите</option>
             <option value="1">1</option>
@@ -71,7 +71,7 @@
             <input id="homeScored" name="homeScored" type="text" class="container__choise-input" placeholder="Ввести">
             <p class="container__choise-title container__choise-title_mod">*Кол-во пропущенных голов команды в последних 5 домашних матчах</p>
             <input id="homeScored" name="homeScored" type="text" class="container__choise-input" placeholder="Ввести">
-            <p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых игроков атакующей линии</p>
+            <p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых&nbsp;игроков атакующей линии</p>
             <select name="selectAttackAway" id="selectvalue" class="container__choise-input container__choise-input_select">
             <option selected value="0">Выберите</option>
             <option value="1">1</option>
@@ -102,15 +102,448 @@
             <iframe class="container__video" src="https://www.youtube.com/embed/HW9gZ-LyAJI" title="YouTube video player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen></iframe>
-
           </div>
         </div>
-        
-          
     </div>
     </section>
-    <main class="content">
+    
+    <section class="line">
+      <button type="button" class="math-button">Получить результаты</button>
+      <div class="line__content">
+        <div class="line__result-box">
+          <p class="line__result-text">Самый вероятный счёт</p>
+          <p class="line__result-goalscore"></p>
+        </div>
+      </div>
+      <div class="line__win-draw-win">
+        <div class="line__win-box">
+          <p class="line__win-title">HOME</p>
+          <p class="line__win-persent"></p>
+        </div>
+        <div class="line__win-box">
+          <p class="line__win-title">DRAW</p>
+          <p class="line__win-persent"></p>
+        </div>
+        <div class="line__win-box">
+          <p class="line__win-title">AWAY</p>
+          <p class="line__win-persent"></p>
+        </div>
+      </div>
+      <div class="line__persent-container">
+        <div class="line__persent-box">
+          <p class="line__paragraph">Результат матча</p>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text"></p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border">?</p>
+              <p class="line__box-line-text">?</p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Победа HOME</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Ничья</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME не проиграет</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (0)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (+1)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (+1.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (+2)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (+2.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (-1)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (-1.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (-2)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">HOME с форой (-2.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (0.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (1)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (1.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (2)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (2.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (3)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (3.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (4)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (4.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал больше (5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Обе забьют</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+      
+   
+
+        </div>       
+
+        <div class="line__persent-box">
+          <p class="line__paragraph">Результат матча</p>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text"></p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border">?</p>
+              <p class="line__box-line-text">?</p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Победа AWAY</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Ничьи не будет</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY не проиграет</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Away с форой (0)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY с форой (+1)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY с форой (+1.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY с форой (+2)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY с форой (+2.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY с форой (-1)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY с форой (-1.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY с форой (-2)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">AWAY с форой (-2.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (0.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (1)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (1.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (2)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (2.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (3)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (3.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (4)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (4.5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Тотал меньше (5)</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+          <div class="line__box-line">
+            <p class="line__box-line-text">Хотя бы одна не забьёт</p>
+            <div class="line__box-line-box">
+              <p class="line__box-line-text line__box-line-text_border"></p>
+              <p class="line__box-line-text"></p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
     </section>
+
+    <footer class="footer">
+      <p class="footer__text">© 2022 Math2<span class="header__title-span">Bet</span></p>
+    </footer>
+    
+
+
+
+
+
+
+
+
+    
       
     
     
