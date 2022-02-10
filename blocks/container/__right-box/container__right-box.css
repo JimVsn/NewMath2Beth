@@ -3,3 +3,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 450px) {
+  .container__right-box {
+    flex-direction: column;
+  }
+}

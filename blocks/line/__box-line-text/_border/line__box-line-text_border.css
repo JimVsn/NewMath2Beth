@@ -3,3 +3,10 @@
  height: 20px;
  margin-top: 3px;
 }
+
+@media screen and (max-width: 450px) {
+  .line__box-line-text_border {
+    width: 10px;
+    height: 10px;
+  }
+}

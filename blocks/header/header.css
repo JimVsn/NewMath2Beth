@@ -2,6 +2,10 @@
   max-width: 1200px;
   width: 100%;
   margin: 40px auto 0;
-  /* background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%); */
-  
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    margin-top: 15px;
+  }
 }

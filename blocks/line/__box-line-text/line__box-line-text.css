@@ -5,3 +5,10 @@
   line-height: 18px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 450px) {
+  .line__box-line-text {
+    font-size: 8px;
+    line-height: 9px;
+  }
+}

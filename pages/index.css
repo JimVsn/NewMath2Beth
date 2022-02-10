@@ -25,6 +25,7 @@
 @import url(../blocks/container/__choise-title/_mod/container__choise-title_mod.css);
 @import url(../blocks/container/__banner/container__banner.css);
 @import url(../blocks/container/__video/container__video.css);
+@import url(../blocks/container/__option/container__option.css);
 
 @import url(../blocks/line/line.css);
 @import url(../blocks/math-button/math-button.css);

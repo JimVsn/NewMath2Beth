@@ -26,3 +26,13 @@
 .container__nav-link:hover:after {
   content: "\27A4";
 }
+
+@media screen and (max-width: 450px) {
+  .container__nav-link {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .container__nav-link:last-child {
+    padding-bottom: 0;
+  }
+}

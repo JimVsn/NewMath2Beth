@@ -4,3 +4,9 @@
   align-items: flex-start;
   width: 43%;
 }
+
+@media screen and (max-width: 450px) {
+  .container__right-choice {
+    width: 50%;
+  }
+}
