@@ -4,12 +4,13 @@
   flex-direction: column;
   width: 40%;
   height: 269px;
-  border-radius: 0 20px 20px 0;
-  /* border: 1px white solid; */
+  border: 1px white solid;
 }
 
 @media screen and (max-width: 450px) {
   .container__menu {
-    height: 215px;
+    height: 120px;
+    
+    margin-top: 20px;
   }
 }
