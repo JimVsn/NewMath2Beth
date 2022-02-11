@@ -11,11 +11,10 @@
   padding: 15px;
   border-radius: 10px;
   border: none;
-  color:#e2d1c3;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
-  box-shadow: 0 0 5px 2px blue;
+  color:white;
   transition: 0.3s;
+  background-color: black;
+  border: 1px white solid;
 }
 
 .math-button:hover {

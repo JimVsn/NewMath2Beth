@@ -1,0 +1,16 @@
+.line__result-text-box {
+  width: 400px;
+  height: 200px;
+  border: 1px white solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 450px) {
+  .line__result-text-box {
+    width: 200px;
+    height: 100px;
+  }
+}

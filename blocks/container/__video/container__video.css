@@ -3,7 +3,7 @@
   height: 120px;
   margin-top: 250px;
   border: none;
-  box-shadow: 0 0 5px 2px blue;
+  /* box-shadow: 0 0 5px 2px blue; */
 }
 
 @media screen and (max-width: 600px) {

@@ -3,6 +3,12 @@
   font-size: 20px;
   line-height: 23px;
   font-weight: 900;
-  color: black;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  color: white;
+}
+
+@media screen and (max-width: 450px) {
+  .footer__text {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }

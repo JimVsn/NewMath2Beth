@@ -29,9 +29,9 @@
             <a class="container__nav-link" href="#">F.A.Q</a>
           </nav>
           <div class="container__left-choise">
-            <p class="container__choise-title">*Кол-во забитых голов команды в последних 5 домашних матчах</p>
+            <p class="container__choise-title">*Кол-во забитых&nbsp;голов команды в последних 5 домашних матчах</p>
             <input id="homeScored" name="homeScored" type="number" class="container__choise-input" placeholder="Ввести">
-            <p class="container__choise-title">*Кол-во пропущенных голов команды в последних 5 домашних матчах</p>
+            <p class="container__choise-title">*Кол-во пропущенных голов&nbsp;команды&nbsp;в последних 5 домашних матчах</p>
             <input id="homeMissed" name="homeMissed" type="number" class="container__choise-input" placeholder="Ввести">
             <p class="container__choise-title">*Кол-во отсутствующих ключевых&nbsp;игроков атакующей линии</p>
             <select name="selectAttackHome" id="selectvalue" class="container__choise-input container__choise-input_select">
@@ -67,9 +67,9 @@
         <h2 class="container__title">AWAY</h2>
         <div class="container__right-box">
           <div class="container__right-choice">
-            <p class="container__choise-title container__choise-title_mod">*Кол-во забитых голов команды в последних 5 домашних матчах</p>
+            <p class="container__choise-title container__choise-title_mod">*Кол-во забитых&nbsp;голов команды в последних 5 домашних матчах</p>
             <input id="awayScored" name="awayScored" type="number" class="container__choise-input" placeholder="Ввести">
-            <p class="container__choise-title container__choise-title_mod">*Кол-во пропущенных голов команды в последних 5 домашних матчах</p>
+            <p class="container__choise-title container__choise-title_mod">*Кол-во пропущенных голов&nbsp;команды&nbsp;в последних 5 домашних матчах</p>
             <input id="awayMissed" name="awayMissed" type="number" class="container__choise-input" placeholder="Ввести">
             <p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых&nbsp;игроков атакующей линии</p>
             <select name="selectAttackAway" id="selectvalue" class="container__choise-input container__choise-input_select">
@@ -112,218 +112,319 @@
       <div class="line__content">
         <div class="line__result-box">
           <p class="line__result-text">Самый вероятный счёт</p>
+          <div class="line__result-text-box">
           <p class="line__result-goalscore"></p>
+         </div>
         </div>
       </div>
       <div class="line__win-draw-win">
         <div class="line__win-box">
           <p class="line__win-title">HOME</p>
+          <div class="line__win-title-box">
           <p class="line__win-persent win-persent"></p>
+          </div>
         </div>
         <div class="line__win-box">
           <p class="line__win-title">DRAW</p>
+          <div class="line__win-title-box">
           <p class="line__win-persent draw-persent"></p>
         </div>
+        </div>
         <div class="line__win-box">
-          <p class="line__win-title">AWAY</p>
+          <p class="line__win-title line__win-title_mod">AWAY</p>
+          <div class="line__win-title-box">
           <p class="line__win-persent awayWin-persent"></p>
+          </div>
         </div>
       </div>
       <div class="line__persent-container">
         <div class="line__persent-box">
           <p class="line__paragraph">Результат матча</p>
 
-          <div class="line__box-line">
-            <p class="line__box-line-text"></p>
-            <div class="line__box-line-box">
-              <p data-tooltip="Вероятность прохода" class="line__tooltip-paragraph"><img src="../NewMath2Beth/images/question.png" class="line__box-line-text_border"></p>
-              <p data-tooltip="Минимальный коэффициент для положительного ROI" class="line__tooltip-paragraph"><img src="../NewMath2Beth/images/question.png" class="line__box-line-text_border"></p>
+          
+            
+            <div class="line__box-line-title">
+              <p class="line__box-line-text_border">Событие</p>
+              <p class="line__box-line-text_border">Вероятность</p>
+              <p class="line__box-line-text_border">Мин. коэфф. для положительного ROI</p>
             </div>
-          </div>
+
+         
 
           <div class="line__box-line">
             <p class="line__box-line-text">Победа HOME</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text line-winHome-persent"></p>
-              <p class="line__box-line-text profit-kef"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a href="#" class="line__box-line-text profit-kef line__box-line-text_link"></a>
+              </div>
             </div>
           </div>
+          
 
           <div class="line__box-line">
             <p class="line__box-line-text">Ничья</p>
+         
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text draw"></p>
-              <p class="line__box-line-text draw-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a href="#" class="line__box-line-text draw-profit line__box-line-text_link"></a>
+              </div>
             </div>
           </div>
+          
 
           <div class="line__box-line">
             <p class="line__box-line-text">HOME не проиграет</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text homeX"></p>
-              <p class="line__box-line-text homeX-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a href="#" class="line__box-line-text homeX-profit line__box-line-text_link"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (0)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text homeNull"></p>
               <p class="line__box-line-text homeNull-profit"></p>
             </div>
-          </div>
+          </div>  -->
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (+1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-plusOne"></p>
               <p class="line__box-line-text home-plusOne-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (+1.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text home-plusOneFive"></p>
-              <p class="line__box-line-text home-plusOneFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text home-plusOneFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (+2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-plusTwo"></p>
               <p class="line__box-line-text home-plusTwo-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (+2.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text home-plusTwoFive"></p>
-              <p class="line__box-line-text home-plusTwoFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text home-plusTwoFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (-1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-minusOne"></p>
               <p class="line__box-line-text home-minusOne-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (-1.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text home-minusOneFive"></p>
-              <p class="line__box-line-text home-minusOneFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text home-minusOneFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+           <!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (-2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-minusTwo"></p>
               <p class="line__box-line-text home-minusTwo-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (-2.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text home-minusTwoFive"></p>
-              <p class="line__box-line-text home-minusTwoFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text home-minusTwoFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (0.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalMore-nullFive"></p>
-              <p class="line__box-line-text totalMore-nullFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalMore-nullFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+         
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-one"></p>
               <p class="line__box-line-text totalMore-one-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (1.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalMore-oneFive"></p>
-              <p class="line__box-line-text totalMore-oneFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalMore-oneFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-two"></p>
               <p class="line__box-line-text totalMore-two-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (2.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalMore-twoFive"></p>
-              <p class="line__box-line-text totalMore-twoFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalMore-twoFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (3)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-three"></p>
               <p class="line__box-line-text totalMore-three-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (3.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalMore-threeFive"></p>
-              <p class="line__box-line-text totalMore-threeFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalMore-threeFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (4)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-four"></p>
               <p class="line__box-line-text totalMOre-four-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (4.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalMore-fourFive"></p>
-              <p class="line__box-line-text totalMore-fourFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalMore-fourFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (5)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-five"></p>
               <p class="line__box-line-text totalMore-five-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Обе забьют</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text allScored"></p>
-              <p class="line__box-line-text allScored-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text allScored-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+        
 
       
    
@@ -333,197 +434,288 @@
         <div class="line__persent-box">
           <p class="line__paragraph">Результат матча</p>
 
-          <div class="line__box-line">
-            <p class="line__box-line-text"></p>
-            <div class="line__box-line-box">
-              <p data-tooltip="Вероятность прохода" class="line__tooltip-paragraph"><img src="../NewMath2Beth/images/question.png" class="line__box-line-text_border"></p>
-              <p data-tooltip="Минимальный коэффициент для положительного ROI" class="line__tooltip-paragraph"><img src="../NewMath2Beth/images/question.png" class="line__box-line-text_border"></p>
+         
+  
+            <div class="line__box-line-title">
+              <p class="line__box-line-text_border">Событие</p>
+              <p class="line__box-line-text_border">Вероятность</p>
+              <p class="line__box-line-text_border">Мин. коэфф. для положительного ROI</p>
             </div>
-          </div>
+          
 
           <div class="line__box-line">
             <p class="line__box-line-text">Победа AWAY</p>
+        
             <div class="line__box-line-box">
+              <div class="line__persent-exel">
               <p class="line__box-line-text away-win"></p>
-              <p class="line__box-line-text away-win-profit"></p>
+              </div>
+              <div class="line__persent-exel">          
+              <a class="line__box-line-text away-win-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
           <div class="line__box-line">
             <p class="line__box-line-text">Ничьи не будет</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text notDraw"></p>
-              <p class="line__box-line-text notDraw-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text notDraw-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
           <div class="line__box-line">
             <p class="line__box-line-text">AWAY не проиграет</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text awayX"></p>
-              <p class="line__box-line-text awayX-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text awayX-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Away с форой (0)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text awayNull"></p>
               <p class="line__box-line-text awayNull-profit"></p>
             </div>
-          </div>
+          </div> -->
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (+1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-plusOne"></p>
               <p class="line__box-line-text away-plusOne-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (+1.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text away-plusOneFive"></p>
-              <p class="line__box-line-text away-plusOneFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text away-plusOneFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (+2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-plusTwo"></p>
               <p class="line__box-line-text away-plusTwo-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (+2.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text away-plusTwoFive"></p>
-              <p class="line__box-line-text away-plusTwoFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text away-plusTwoFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (-1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-minusOne"></p>
               <p class="line__box-line-text away-minusOne-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (-1.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text away-minusOneFive"></p>
-              <p class="line__box-line-text away-minusOneFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text away-minusOneFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (-2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-minusTwo"></p>
               <p class="line__box-line-text away-minusTwo-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (-2.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text away-minusTwoFive"></p>
-              <p class="line__box-line-text away-minusTwoFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text away-minusTwoFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (0.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalLess-nullFive"></p>
-              <p class="line__box-line-text totalLess-nullFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalLess-nullFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+        
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-one"></p>
               <p class="line__box-line-text totalLess-one-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (1.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalLess-oneFive"></p>
-              <p class="line__box-line-text totalLess-oneFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalLess-oneFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-two"></p>
               <p class="line__box-line-text totalLess-two-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (2.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalLess-twoFive"></p>
-              <p class="line__box-line-text totalLess-twoFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalLess-twoFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (3)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-three"></p>
               <p class="line__box-line-text totalLess-three-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (3.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalLess-threeFive"></p>
-              <p class="line__box-line-text totalLess-threeFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalLess-threeFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (4)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-four"></p>
               <p class="line__box-line-text totalLess-four-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (4.5)</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text totalLess-fourFive"></p>
-              <p class="line__box-line-text totalLess-fourFive-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text totalLess-fourFive-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
-          <div class="line__box-line">
+          <!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (5)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-five"></p>
               <p class="line__box-line-text totalLess-five-profit"></p>
             </div>
-          </div>
+          </div> -->
 
           <div class="line__box-line">
             <p class="line__box-line-text">Хотя бы одна не забьёт</p>
+          
+
             <div class="line__box-line-box">
+              <div class="line__persent-exel"> 
               <p class="line__box-line-text notAllScored"></p>
-              <p class="line__box-line-text notAllScored-profit"></p>
+              </div>
+              <div class="line__persent-exel"> 
+              <a class="line__box-line-text notAllScored-profit line__box-line-text_link" href="#"></a>
+              </div>
             </div>
           </div>
+          
 
 
         </div>

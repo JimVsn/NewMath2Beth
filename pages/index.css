@@ -45,6 +45,13 @@
 @import url(../blocks/line/__box-line-text/line__box-line-text.css);
 @import url(../blocks/line/__box-line-box/line__box-line-box.css);
 @import url(../blocks/line/__box-line-text/_border/line__box-line-text_border.css);
+@import url(../blocks/line/__line-title/line__line-title.css);
+@import url(../blocks/line/__box-line-title/line__box-line-title.css);
+@import url(../blocks/line/__persent-exel/line__persent-exel.css);
+@import url(../blocks/line/__win-title-box/line__win-title-box.css);
+@import url(../blocks/line/__result-text-box/line__result-text-box.css);
+@import url(../blocks/line/__win-title/_mod/line__win-title_mod.css);
+@import url(../blocks/line/__box-line-text/_link/line__box-line-text_link.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__text/footer__text.css);

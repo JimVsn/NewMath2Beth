@@ -4,7 +4,7 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .container__right-box {
     flex-direction: column;
   }

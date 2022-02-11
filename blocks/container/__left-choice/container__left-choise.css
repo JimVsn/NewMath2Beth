@@ -1,6 +1,6 @@
 .container__left-choise {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 34%;
   align-items: flex-end;
 }
