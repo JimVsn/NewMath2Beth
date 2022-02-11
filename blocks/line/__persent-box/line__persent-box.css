@@ -7,6 +7,6 @@
 
 @media screen and (max-width: 450px) {
   .line__persent-box {
-    width: 48%;
+    width: 100%;
   }
 }
