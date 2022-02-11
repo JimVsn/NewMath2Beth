@@ -11,3 +11,26 @@
     max-width: 300px;
   }
 }
+
+@media screen and (min-width: 650px)and (max-width: 750px) {
+  .line__win-draw-win {
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 550px) {
+  .line__win-draw-win {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 650px) {
+  .line__win-draw-win {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 850px) {
+  .line__win-draw-win {
+    max-width: 700px;
+  }
+}

@@ -8,9 +8,18 @@
   margin-top: 30px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .line__win-title-box {
     width: 100px;
     height: 75px;
+  }
+}
+
+
+
+@media screen and (min-width: 550px) and (max-width: 850px) {
+  .line__win-title-box {
+    width: 150px;
+    height: 100px;
   }
 }

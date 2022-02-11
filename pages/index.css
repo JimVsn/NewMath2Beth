@@ -8,6 +8,8 @@
 @import url(../blocks/header/__title-span/header__title-span.css);
 @import url(../blocks/header/__text/header__text.css);
 
+@import url(../blocks/persent-close/persent-close.css);
+
 @import url(../blocks/container/container.css);
 @import url(../blocks/container/__left-section/container__left-section.css);
 @import url(../blocks/container/__right-section/container__right-section.css);
@@ -52,6 +54,10 @@
 @import url(../blocks/line/__result-text-box/line__result-text-box.css);
 @import url(../blocks/line/__win-title/_mod/line__win-title_mod.css);
 @import url(../blocks/line/__box-line-text/_link/line__box-line-text_link.css);
+@import url(../blocks/line/__persent__container/_mod/line__persent-container_mod.css);
+@import url(../blocks/line/__paragraph/_mod/line__paragraph_mod.css);
+@import url(../blocks/line/__paragraph/_par/line__paragraph_par.css);
+@import url(../blocks/line/__persent-box/_mod/line__persent-box_mod.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__text/footer__text.css);

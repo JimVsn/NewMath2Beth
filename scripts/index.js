@@ -1,3 +1,19 @@
+if(document.documentElement.clientWidth < 500) {
+    // тут ваш скрипт
+    document.getElementById('elem').style.display = 'none';
+  }
+  if(document.documentElement.clientWidth < 500) {
+      // тут ваш скрипт
+      document.getElementById('mobile').style.display = 'flex';
+      // document.classList.remove('.line-winHome-persent');
+      
+    }
+  
+
+
+    
+
+  
 const resultMathButton = document.querySelector('.math-button');
 
 function areaRectangle(){
@@ -222,12 +238,20 @@ function PoissonDistrib(key_var , lambda_var){
    const winPersent = document.querySelector('.win-persent');
    winPersent.textContent = winHomeTeam.toFixed(2) + ' %';
 
+   const awinPersentMod = document.querySelector('.line-winHome-persent_mod');
+   awinPersentMod.textContent = winHomeTeam.toFixed(2) + ' %';
+
    const lineWinHomePersent = document.querySelector('.line-winHome-persent');
    lineWinHomePersent.textContent = winHomeTeam.toFixed(2) + ' %';
+
+   
   
    const profitWinFirstTeam = 1.15/(winHomeTeam/100);
    const profitKef = document.querySelector('.profit-kef');
    profitKef.textContent = profitWinFirstTeam.toFixed(2);
+
+   const lineboxlinetextlinkmod = document.querySelector('.profit-kef_mod');
+   lineboxlinetextlinkmod.textContent = profitWinFirstTeam.toFixed(2);
    
   
    //Процент победы выездной команды
@@ -237,10 +261,16 @@ function PoissonDistrib(key_var , lambda_var){
 
    const awayWin = document.querySelector('.away-win');
    awayWin.textContent = winAwayTeam.toFixed(2) + ' %';
+
+   const awayWinMod = document.querySelector('.away-win_mod');
+   awayWinMod.textContent = winAwayTeam.toFixed(2) + ' %';
   
    const profitWinSecondTeam = 1.15/(winAwayTeam/100);
    const profitKefB = document.querySelector('.away-win-profit')
    profitKefB.textContent = profitWinSecondTeam.toFixed(2);
+
+   const profitKefBMod = document.querySelector('.away-win-profit_mod')
+   profitKefBMod.textContent = profitWinSecondTeam.toFixed(2);
    
   
    //Процент на ничью
@@ -254,34 +284,58 @@ function PoissonDistrib(key_var , lambda_var){
    const profitDraw = 1.15/(drawHomeAway/100);
    const profitKefA = document.querySelector('.draw-profit');
    profitKefA.textContent = profitDraw.toFixed(2);
+
+   const drawMod = document.querySelector('.draw_mod')
+   drawMod.textContent = drawHomeAway.toFixed(2) + ' %';
+
+   const drawProfitMod = document.querySelector('.draw-profit_mod')
+   drawProfitMod.textContent = profitDraw.toFixed(2);
    
   
    //Процент на 1х
    const oneXHomeTeam = winHomeTeam+drawHomeAway;
    const homeX = document.querySelector('.homeX')
    homeX.textContent = oneXHomeTeam.toFixed(2) + ' %';
+
+   const homeXMod = document.querySelector('.homeX_mod')
+   homeXMod.textContent = oneXHomeTeam.toFixed(2) + ' %';
   
    const profitXfirstTeam = 1.15/(oneXHomeTeam/100);
    const profitKefC = document.querySelector('.homeX-profit');
    profitKefC.textContent = profitXfirstTeam.toFixed(2);
+
+   const profitKefCMod = document.querySelector('.homeX-profit_mod');
+   profitKefCMod.textContent = profitXfirstTeam.toFixed(2);
   
    // 2x
    const twoXAwayTeam = winAwayTeam+drawHomeAway;
    const awayX = document.querySelector('.awayX');
    awayX.textContent = twoXAwayTeam.toFixed(2) + ' %';
+
+   const awayXMod = document.querySelector('.awayX_mod');
+   awayXMod.textContent = twoXAwayTeam.toFixed(2) + ' %';
   
    const profitXSecondTeam = 1.15/(twoXAwayTeam/100);
    const profitKefE = document.querySelector('.awayX-profit');
    profitKefE.textContent = profitXSecondTeam.toFixed(2); 
+
+   const profitKefEMod = document.querySelector('.awayX-profit_mod');
+   profitKefEMod.textContent = profitXSecondTeam.toFixed(2); 
   
    //12
    const notDrawHomeAway = 100-drawHomeAway;
    const notDraw = document.querySelector('.notDraw')
    notDraw.textContent = notDrawHomeAway.toFixed(2) + ' %';
+
+   const notDrawMod = document.querySelector('.notDraw_mod')
+   notDrawMod.textContent = notDrawHomeAway.toFixed(2) + ' %';
   
    const profitNotDraw = 1.15/(notDrawHomeAway/100);
    const profitKefD = document.querySelector('.notDraw-profit');
    profitKefD.textContent = profitNotDraw.toFixed(2);
+
+   const profitKefDMod = document.querySelector('.notDraw-profit_mod');
+   profitKefDMod.textContent = profitNotDraw.toFixed(2);
   
    //1(0)
    const homeNull = document.querySelector('.homeNull')
@@ -322,9 +376,15 @@ function PoissonDistrib(key_var , lambda_var){
    const homeMinusOneFive = document.querySelector('.home-minusOneFive');
    homeMinusOneFive.textContent = minusOneFirstTeam.toFixed(2) + ' %';
    const profitKefJ = document.querySelector('.home-minusOneFive-profit');
+
+   const homeMinusOneFiveMod = document.querySelector('.home-minusOneFive_mod');
+   homeMinusOneFiveMod.textContent = minusOneFirstTeam.toFixed(2) + ' %';
+   const profitKefJMod = document.querySelector('.home-minusOneFive-profit_mod');
   
    const profitMinusOneFiveFirstTeam = 1.15/(minusOneFirstTeam/100);
    profitKefJ.textContent = profitMinusOneFiveFirstTeam.toFixed(2);
+
+   profitKefJMod.textContent = profitMinusOneFiveFirstTeam.toFixed(2);
   
   
   
@@ -332,9 +392,14 @@ function PoissonDistrib(key_var , lambda_var){
    const awayMinusOneFive = document.querySelector('.away-minusOneFive');
    awayMinusOneFive.textContent = minusOneSecondTeam.toFixed(2) + ' %';
    const profitKefK = document.querySelector('.away-minusOneFive-profit');
+
+   const awayMinusOneFiveMod = document.querySelector('.away-minusOneFive_mod');
+   awayMinusOneFiveMod.textContent = minusOneSecondTeam.toFixed(2) + ' %';
+   const profitKefKMod = document.querySelector('.away-minusOneFive-profit_mod');
   
    const profitMinusOneFiveSecondTeam = 1.15/(minusOneSecondTeam/100);
    profitKefK.textContent = profitMinusOneFiveSecondTeam.toFixed(2);
+   profitKefKMod.textContent = profitMinusOneFiveSecondTeam.toFixed(2);
   
    //1(-2)
    const minusTwoFirstTeam = threeNull+fourNull+fourOne+fiveNull+fiveOne+fiveTwo+sixNull+sixOne+sixTwo+sixThree+sevenNull+sevenOne+sevenTwo+sevenThree+sevenFour;
@@ -359,9 +424,15 @@ function PoissonDistrib(key_var , lambda_var){
    const homeMinusTwoFive= document.querySelector('.home-minusTwoFive');
    homeMinusTwoFive.textContent = minusTwoFiveFirstTeam.toFixed(2) + ' %';
    const profitKefN = document.querySelector('.home-minusTwoFive-profit');
+
+   const homeMinusTwoFiveMod = document.querySelector('.home-minusTwoFive_mod');
+   homeMinusTwoFiveMod.textContent = minusTwoFiveFirstTeam.toFixed(2) + ' %';
+   const profitKefNMod = document.querySelector('.home-minusTwoFive-profit_mod');
    
    const profitMinusTwoFiveFirstTeam = 1.15/(minusTwoFiveFirstTeam/100);
    profitKefN.textContent = profitMinusTwoFiveFirstTeam.toFixed(2);
+
+   profitKefNMod.textContent = profitMinusTwoFiveFirstTeam.toFixed(2);
   
    //2(-2.5)
    const minusTwoFiveSecondTeam = nullThree+nullFour+oneFour+nullFive+oneFive+twoFive+nullSix+oneSix+twoSix+threeSix+nullSeven+oneSeven+twoSeven+threeSeven+fourSeven;
@@ -369,8 +440,13 @@ function PoissonDistrib(key_var , lambda_var){
    awayMinusTwoFive.textContent = minusTwoFiveSecondTeam.toFixed(2) + ' %';
    const profitKefO = document.querySelector('.away-minusTwoFive-profit');
    
+   const awayMinusTwoFiveMod = document.querySelector('.away-minusTwoFive_mod');
+   awayMinusTwoFiveMod.textContent = minusTwoFiveSecondTeam.toFixed(2) + ' %';
+   const profitKefOMod = document.querySelector('.away-minusTwoFive-profit_mod');
+
    const profitMinusTwoFiveSecondTeam = 1.15/(minusTwoFiveSecondTeam/100);
    profitKefO.textContent = profitMinusTwoFiveSecondTeam.toFixed(2);
+   profitKefOMod.textContent = profitMinusTwoFiveSecondTeam.toFixed(2);
   
    //1(+1)
    const plusOneFirstTeam = winHomeTeam+drawHomeAway;
@@ -395,18 +471,29 @@ function PoissonDistrib(key_var , lambda_var){
    const homePlusOneFive = document.querySelector('.home-plusOneFive');
    homePlusOneFive.textContent = plusOneFiveFirstTeam.toFixed(2) + ' %';
    const profitKefR = document.querySelector('.home-plusOneFive-profit');
+
+   const homePlusOneFiveMod = document.querySelector('.home-plusOneFive_mod');
+   homePlusOneFiveMod.textContent = plusOneFiveFirstTeam.toFixed(2) + ' %';
+   const profitKefRMod = document.querySelector('.home-plusOneFive-profit_mod');
    
    const profitPlusOneFiveFirstTeam = 1.15/(plusOneFiveFirstTeam/100);
    profitKefR.textContent = profitPlusOneFiveFirstTeam.toFixed(2);
+
+   profitKefRMod.textContent = profitPlusOneFiveFirstTeam.toFixed(2);
   
    //2(+1.5)
    const plusOneFiveSecondTeam = winAwayTeam+drawHomeAway+oneNull+twoOne+threeTwo+fourThree+fiveFour+sixFive+sevenSix;
    const awayPlusOneFive= document.querySelector('.away-plusOneFive');
    awayPlusOneFive.textContent = plusOneFiveSecondTeam.toFixed(2) + ' %';
    const profitKefS = document.querySelector('.away-plusOneFive-profit');
+
+   const awayPlusOneFiveMod = document.querySelector('.away-plusOneFive_mod');
+   awayPlusOneFiveMod.textContent = plusOneFiveSecondTeam.toFixed(2) + ' %';
+   const profitKefSMod = document.querySelector('.away-plusOneFive-profit_mod');
    
    const profitPlusOneFiveSecondTeam = 1.15/(plusOneFiveSecondTeam/100);
    profitKefS.textContent = profitPlusOneFiveSecondTeam.toFixed(2);
+   profitKefSMod.textContent = profitPlusOneFiveSecondTeam.toFixed(2);
   
    //1(+2)
    const plusTwoFirstTeam = winHomeTeam+drawHomeAway+nullOne+oneTwo+twoThree+threeFour+fourFive+fiveSix+sixSeven;
@@ -431,36 +518,58 @@ function PoissonDistrib(key_var , lambda_var){
    const homePlusTwoFive = document.querySelector('.home-plusTwoFive');
    homePlusTwoFive.textContent = plusTwoFiveFirstTeam.toFixed(2) + ' %';
    const profitKefV = document.querySelector('.home-plusTwoFive-profit');
+
+   const homePlusTwoFiveMod = document.querySelector('.home-plusTwoFive_mod');
+   homePlusTwoFiveMod.textContent = plusTwoFiveFirstTeam.toFixed(2) + ' %';
+   const profitKefVMod = document.querySelector('.home-plusTwoFive-profit_mod');
    
    const profitPlusTwoFiveFirstTeam = 1.15/(plusTwoFiveFirstTeam/100);
    profitKefV.textContent = profitPlusTwoFiveFirstTeam.toFixed(2);
+
+   profitKefVMod.textContent = profitPlusTwoFiveFirstTeam.toFixed(2);
   
    //2(+2.5)
    const plusTwoFiveSecondTeam = winAwayTeam+drawHomeAway+oneNull+twoOne+threeTwo+fourThree+fiveFour+sixFive+sevenSix+twoNull+threeOne+fourTwo+fiveThree+sixFour+sevenFive;
    const awayPlusTwoFive = document.querySelector('.away-plusTwoFive');
    awayPlusTwoFive.textContent = plusTwoFiveSecondTeam.toFixed(2) + ' %';
    const profitKefW = document.querySelector('.away-plusTwoFive-profit');
+
+   const awayPlusTwoFiveMod = document.querySelector('.away-plusTwoFive_mod');
+   awayPlusTwoFiveMod.textContent = plusTwoFiveSecondTeam.toFixed(2) + ' %';
+   const profitKefWMod = document.querySelector('.away-plusTwoFive-profit_mod');
    
    const profitPlusTwoFiveSecondTeam = 1.15/(plusTwoFiveSecondTeam/100);
    profitKefW.textContent = profitPlusTwoFiveSecondTeam.toFixed(2);
+   profitKefWMod.textContent = profitPlusTwoFiveSecondTeam.toFixed(2);
   
    //Total more 0.5
    const totalNullFiveFirstTeam = (winHomeTeam+(drawHomeAway-nullNull)+winAwayTeam);
    const totalMoreNullFive = document.querySelector('.totalMore-nullFive');
    totalMoreNullFive.textContent = totalNullFiveFirstTeam.toFixed(2) + ' %';
    const profitKefX = document.querySelector('.totalMore-nullFive-profit');
+
+   const totalMoreNullFiveMod = document.querySelector('.totalMore-nullFive_mod');
+   totalMoreNullFiveMod.textContent = totalNullFiveFirstTeam.toFixed(2) + ' %';
+   const profitKefXMod = document.querySelector('.totalMore-nullFive-profit_mod');
    
    const profitTotalNullFiveFirstTeam = 1.15/(totalNullFiveFirstTeam/100);
    profitKefX.textContent = profitTotalNullFiveFirstTeam.toFixed(2);
+
+   profitKefXMod.textContent = profitTotalNullFiveFirstTeam.toFixed(2);
   
    //Total less 0.5
    const totalNullFiveSecondTeam = 100-totalNullFiveFirstTeam;
    const totalLessNullFive = document.querySelector('.totalLess-nullFive');
    totalLessNullFive.textContent = totalNullFiveSecondTeam.toFixed(2) + ' %';
    const profitKefY = document.querySelector('.totalLess-nullFive-profit');
+
+   const totalLessNullFiveMod = document.querySelector('.totalLess-nullFive_mod');
+   totalLessNullFiveMod.textContent = totalNullFiveSecondTeam.toFixed(2) + ' %';
+   const profitKefYMod = document.querySelector('.totalLess-nullFive-profit_mod');
    
    const profitTotalNullFiveSecondTeam = 1.15/(totalNullFiveSecondTeam/100);
    profitKefY.textContent = profitTotalNullFiveSecondTeam.toFixed(2);
+   profitKefYMod.textContent = profitTotalNullFiveSecondTeam.toFixed(2);
   
    //Total more 1
    const totalOneFirstTeam = oneOne+twoOne+threeOne+fourOne+fiveOne+sixOne+sevenOne+oneTwo+oneThree+oneFour+oneFive+oneSix+oneSeven+twoTwo+
@@ -493,18 +602,29 @@ function PoissonDistrib(key_var , lambda_var){
    const totalMoreOneFive = document.querySelector('.totalMore-oneFive');
    totalMoreOneFive.textContent = totalOneFiveFirstTeam.toFixed(2) + ' %';
    const profitKefBB = document.querySelector('.totalMore-oneFive-profit');
+
+   const totalMoreOneFiveMod = document.querySelector('.totalMore-oneFive_mod');
+   totalMoreOneFiveMod.textContent = totalOneFiveFirstTeam.toFixed(2) + ' %';
+   const profitKefBBMod = document.querySelector('.totalMore-oneFive-profit_mod');
    
    const profitTotalOneFiveFirstTeam = 1.15/(totalOneFiveFirstTeam/100);
    profitKefBB.textContent = profitTotalOneFiveFirstTeam.toFixed(2);
+
+   profitKefBBMod.textContent = profitTotalOneFiveFirstTeam.toFixed(2);
   
    //Total less 1.5
    const totalOneFiveSecondTeam = 100-totalOneFiveFirstTeam;
    const totalLessOneFive = document.querySelector('.totalLess-oneFive');
    totalLessOneFive.textContent = totalOneFiveSecondTeam.toFixed(2) + ' %';
    const profitKefCC = document.querySelector('.totalLess-oneFive-profit');
+
+   const totalLessOneFiveMod = document.querySelector('.totalLess-oneFive_mod');
+   totalLessOneFiveMod.textContent = totalOneFiveSecondTeam.toFixed(2) + ' %';
+   const profitKefCCMod = document.querySelector('.totalLess-oneFive-profit_mod');
   
    const profitTotalOneFiveSecondTeam = 1.15/(totalOneFiveSecondTeam/100);
    profitKefCC.textContent = profitTotalOneFiveSecondTeam.toFixed(2);
+   profitKefCCMod.textContent = profitTotalOneFiveSecondTeam.toFixed(2);
   
    //Total more 2
    const totalTwoFirstTeam = twoOne+threeOne+fourOne+fiveOne+sixOne+sevenOne+oneTwo+oneThree+oneFour+oneFive+oneSix+oneSeven+twoTwo+
@@ -537,18 +657,29 @@ function PoissonDistrib(key_var , lambda_var){
    const totalMoreTwoFive = document.querySelector('.totalMore-twoFive');
    totalMoreTwoFive.textContent = totalTwoFiveFirstTeam.toFixed(2) + ' %';
    const profitKefGG = document.querySelector('.totalMore-twoFive-profit');
+
+   const totalMoreTwoFiveMod = document.querySelector('.totalMore-twoFive_mod');
+   totalMoreTwoFiveMod.textContent = totalTwoFiveFirstTeam.toFixed(2) + ' %';
+   const profitKefGGMod = document.querySelector('.totalMore-twoFive-profit_mod');
    
    const profitTotalTwoFiveFirstTeam = 1.15/(totalTwoFiveFirstTeam/100);
    profitKefGG.textContent = profitTotalTwoFiveFirstTeam.toFixed(2);
+
+   profitKefGGMod.textContent = profitTotalTwoFiveFirstTeam.toFixed(2);
   
    //Total less 2.5
    const totalTwoFiveSecondTeam = 100-totalTwoFiveFirstTeam;
    const totalLessTwoFive = document.querySelector('.totalLess-twoFive');
    totalLessTwoFive.textContent = totalTwoFiveSecondTeam.toFixed(2) + ' %';
    const profitKefHH = document.querySelector('.totalLess-twoFive-profit');
+
+   const totalLessTwoFiveMod = document.querySelector('.totalLess-twoFive_mod');
+   totalLessTwoFiveMod.textContent = totalTwoFiveSecondTeam.toFixed(2) + ' %';
+   const profitKefHHMod = document.querySelector('.totalLess-twoFive-profit_mod');
   
    const profitTotalTwoFiveSecondTeam = 1.15/(totalTwoFiveSecondTeam/100);
    profitKefHH.textContent = profitTotalTwoFiveSecondTeam.toFixed(2);
+   profitKefHHMod.textContent = profitTotalTwoFiveSecondTeam.toFixed(2);
   
    //Total more 3
    const totalThreeFirstTeam = threeOne+fourOne+fiveOne+sixOne+sevenOne+oneThree+oneFour+oneFive+oneSix+oneSeven+twoTwo+
@@ -579,18 +710,28 @@ function PoissonDistrib(key_var , lambda_var){
    const totalMoreThreeFive = document.querySelector('.totalMore-threeFive');
    totalMoreThreeFive.textContent = totalThreeFiveFirstTeam.toFixed(2) + ' %';
    const profitKefTF = document.querySelector('.totalMore-threeFive-profit');
+
+   const totalMoreThreeFiveMod = document.querySelector('.totalMore-threeFive_mod');
+   totalMoreThreeFiveMod.textContent = totalThreeFiveFirstTeam.toFixed(2) + ' %';
+   const profitKefTFMod = document.querySelector('.totalMore-threeFive-profit_mod');
    
    const profitTotalThreeFiveFirstTeam = 1.15/(totalThreeFiveFirstTeam/100);
    profitKefTF.textContent = profitTotalThreeFiveFirstTeam.toFixed(2);
+   profitKefTFMod.textContent = profitTotalThreeFiveFirstTeam.toFixed(2);
   
    //Total less 3.5
    const totalThreeFiveSecondTeam = 100-totalThreeFiveFirstTeam;
    const totalLessThreeFive = document.querySelector('.totalLess-threeFive');
    totalLessThreeFive.textContent = totalThreeFiveSecondTeam.toFixed(2) + ' %';
    const profitKefLTF = document.querySelector('.totalLess-threeFive-profit');
+
+   const totalLessThreeFiveMod = document.querySelector('.totalLess-threeFive_mod');
+   totalLessThreeFiveMod.textContent = totalThreeFiveSecondTeam.toFixed(2) + ' %';
+   const profitKefLTFMod = document.querySelector('.totalLess-threeFive-profit_mod');
   
    const profitTotalThreeFiveSecondTeam = 1.15/(totalThreeFiveSecondTeam/100);
    profitKefLTF.textContent = profitTotalThreeFiveSecondTeam.toFixed(2);
+   profitKefLTFMod.textContent = profitTotalThreeFiveSecondTeam.toFixed(2);
 
    //Total more 4
    const totalMoreFourTeam = fourOne+fiveOne+sixOne+sevenOne+oneFour+oneFive+oneSix+oneSeven+
@@ -622,8 +763,13 @@ function PoissonDistrib(key_var , lambda_var){
    totalMoreFourFive.textContent = totalMoreFourFiveTeam.toFixed(2) + ' %';
    const profitTotalMoreFourFive = document.querySelector('.totalMore-fourFive-profit');
 
+   const totalMoreFourFiveMod = document.querySelector('.totalMore-fourFive_mod');
+   totalMoreFourFiveMod.textContent = totalMoreFourFiveTeam.toFixed(2) + ' %';
+   const profitTotalMoreFourFiveMod = document.querySelector('.totalMore-fourFive-profit_mod');
+
    const profitTotalMoreFourFiveTeam =1.15/(totalMoreFourFiveTeam/100);
    profitTotalMoreFourFive.textContent = profitTotalMoreFourFiveTeam.toFixed(2);
+   profitTotalMoreFourFiveMod.textContent = profitTotalMoreFourFiveTeam.toFixed(2);
 
    //Total less 4.5
    const totalLessFourFiveTeam = 100-totalMoreFourFiveTeam;
@@ -631,8 +777,14 @@ function PoissonDistrib(key_var , lambda_var){
    totalLessFourFive.textContent = totalLessFourFiveTeam.toFixed(2) + ' %';
    const profitKefTLFF = document.querySelector('.totalLess-fourFive-profit');
 
+   const totalLessFourFiveMod = document.querySelector('.totalLess-fourFive_mod');
+   totalLessFourFiveMod.textContent = totalLessFourFiveTeam.toFixed(2) + ' %';
+   const profitKefTLFFMod = document.querySelector('.totalLess-fourFive-profit_mod');
+
    const profitTotalLessFourFiveTeam = 1.15/(totalLessFourFiveTeam/100);
    profitKefTLFF.textContent = profitTotalLessFourFiveTeam.toFixed(2);
+
+   profitKefTLFFMod.textContent = profitTotalLessFourFiveTeam.toFixed(2);
 
 
    //Total more 5
@@ -665,8 +817,13 @@ function PoissonDistrib(key_var , lambda_var){
    allScored.textContent = allScoredTeam.toFixed(2) + ' %';
    const profitAllScored = document.querySelector('.allScored-profit');
 
+   const allScoredMod = document.querySelector('.allScored_mod');
+   allScoredMod.textContent = allScoredTeam.toFixed(2) + ' %';
+   const profitAllScoredMod = document.querySelector('.allScored-profit_mod');
+
    const profitAllScoredTeam = 1.15/(allScoredTeam/100);
    profitAllScored.textContent = profitAllScoredTeam.toFixed(2);
+   profitAllScoredMod.textContent = profitAllScoredTeam.toFixed(2);
 
    //Not all scored
    const notAllScoredTeam = 100-allScoredTeam;
@@ -674,8 +831,13 @@ function PoissonDistrib(key_var , lambda_var){
    notAllScored.textContent = notAllScoredTeam.toFixed(2) + ' %';
    const profitNotAllScored = document.querySelector('.notAllScored-profit');
 
+   const notAllScoredMod = document.querySelector('.notAllScored_mod');
+   notAllScoredMod.textContent = notAllScoredTeam.toFixed(2) + ' %';
+   const profitNotAllScoredMod = document.querySelector('.notAllScored-profit_mod');
+
    const profitNotAllScoredTeam = 1.15/(notAllScoredTeam/100);
    profitNotAllScored.textContent = profitNotAllScoredTeam.toFixed(2);
+   profitNotAllScoredMod.textContent = profitNotAllScoredTeam.toFixed(2);
    
     }
   
@@ -797,6 +959,9 @@ function Fixed( s, wid, dec ) {
     if (x < 0)  x = -x;
     return x;
     }
+
+
+   
 
 
 resultMathButton.addEventListener('click', () => {
