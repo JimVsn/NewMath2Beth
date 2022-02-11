@@ -1,8 +1,8 @@
-if(document.documentElement.clientWidth < 500) {
+if(document.documentElement.clientWidth < 600) {
     // тут ваш скрипт
     document.getElementById('elem').style.display = 'none';
   }
-  if(document.documentElement.clientWidth < 500) {
+  if(document.documentElement.clientWidth < 600) {
       // тут ваш скрипт
       document.getElementById('mobile').style.display = 'flex';
       // document.classList.remove('.line-winHome-persent');
