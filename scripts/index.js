@@ -96,8 +96,12 @@ if(u===1)
   //Функция Пуассона
 function PoissonDistrib(key_var , lambda_var){
     const data = areaRectangle();
-    const resultHome = data.mm;
-    const resultAwayTeam = data.yy;
+    const resultHome = data.mm-1.3;
+    const resultAwayTeam = data.yy-1.3;
+
+    console.log(data.mm)
+    console.log(data.yy)
+
     console.log(resultHome)
     console.log(resultAwayTeam)
     
