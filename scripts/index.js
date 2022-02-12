@@ -28,8 +28,8 @@ function areaRectangle(){
     var j=1*document.formMath.teamClassHome.value;
     var k=1*document.formMath.teamClassAway.value;
 
-  var l=(a/5+o/5);
-  var r=(b/5+e/5);
+  var l=(a/5+o/5)-1.3;
+  var r=(b/5+e/5)-1.3;
   var u=p-f;
   var i=q-d;
   var w=j-k;
@@ -96,8 +96,8 @@ if(u===1)
   //Функция Пуассона
 function PoissonDistrib(key_var , lambda_var){
     const data = areaRectangle();
-    const resultHome = data.mm-1.3;
-    const resultAwayTeam = data.yy-1.3;
+    const resultHome = data.mm;
+    const resultAwayTeam = data.yy;
 
     console.log(data.mm)
     console.log(data.yy)
