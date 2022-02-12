@@ -5,8 +5,8 @@
   width: 28%;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .container__right-choice {
-    width: 35%;
+    width: 50%;
   }
 }
