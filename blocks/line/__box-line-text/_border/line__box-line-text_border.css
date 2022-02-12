@@ -16,10 +16,11 @@
 
 @media screen and (max-width: 650px) {
   .line__box-line-text_border {
-    font-size: 4px;
-    line-height: 5px;
+    font-size: 7px;
+    line-height: 8px;
     margin-top: 3px;
     margin-left: 3px;
     padding-right: 2px;
+    margin-bottom: 3px;
   }
 }
