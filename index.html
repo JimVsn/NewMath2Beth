@@ -1,1385 +1,1041 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Math2Beth</title>
-      <link href="../NewMath2Beth/images/Favicon.png" rel="icon">
-      <link rel="stylesheet" href="pages/index.css">
-  </head>
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Math2Beth</title>
+	<link href="../NewMath2Beth/images/Favicon.png" rel="icon">
+	<link rel="stylesheet" href="pages/index.css"> </head>
 
 <body class="body">
-  <div class="page">
-    <main class="content">
-    <header class="header">   
-        <h1 class="header__title">Math2<span class="header__title-span">Bet</span></h1>
-        <h2 class="header__text">Математический расчет исходов на футбол</h2>
-    </header>
-
-    <form name="formMath" class="container">
-      <div class="container__left-section">
-        <h2 class="container__title">HOME</h2>
-        <div class="container__left-box">
-          <nav class="container__menu" id="menu">
-            <a class="container__nav-link" href="#">Главная</a>
-            <a class="container__nav-link" href="#">Статьи</a>
-            <a class="container__nav-link" href="#">Math2Beth</a>
-            <a class="container__nav-link" href="#">Прогнозы</a>
-            <a class="container__nav-link" href="#">F.A.Q</a>
-          </nav>
-          <div class="container__left-choise">
-            <p class="container__choise-title">*Кол-во забитых&nbsp;голов команды в последних 5 домашних матчах</p>
-            <input id="homeScored" name="homeScored" type="number" class="container__choise-input" placeholder="Ввести">
-            <p class="container__choise-title">*Кол-во пропущенных голов&nbsp;команды&nbsp;в последних 5 домашних матчах</p>
-            <input id="homeMissed" name="homeMissed" type="number" class="container__choise-input" placeholder="Ввести">
-            <p class="container__choise-title">*Кол-во отсутствующих ключевых&nbsp;игроков атакующей линии</p>
-            <select name="selectAttackHome" id="selectvalue" class="container__choise-input container__choise-input_select">
-            <option selected value="0">Выберите</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            </select>
-
-            <p class="container__choise-title">*Кол-во отсутствующих ключевых игроков линии защиты</p>
-            <select name="selectDefHome" id="selectvalue" class="container__choise-input container__choise-input_select">
-            <option selected value="0">Выберите</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            </select>
-
-            <p class="container__choise-title">*Класс команды</p>
-            <select name="teamClassHome" id="selectvalue" class="container__choise-input container__choise-input_select">
-            <option selected value="1">Выберите</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            </select>
-        </div>
-
-        </div>
-
-      </div>
-      <div class="container__right-section">
-        <h2 class="container__title">AWAY</h2>
-        <div class="container__right-box">
-          <div class="container__right-choice">
-            <p class="container__choise-title container__choise-title_mod">*Кол-во забитых&nbsp;голов команды в последних 5 домашних матчах</p>
-            <input id="awayScored" name="awayScored" type="number" class="container__choise-input" placeholder="Ввести">
-            <p class="container__choise-title container__choise-title_mod">*Кол-во пропущенных голов&nbsp;команды&nbsp;в последних 5 домашних матчах</p>
-            <input id="awayMissed" name="awayMissed" type="number" class="container__choise-input" placeholder="Ввести">
-            <p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых&nbsp;игроков атакующей линии</p>
-            <select name="selectAttackAway" id="selectvalue" class="container__choise-input container__choise-input_select">
-            <option selected value="0">Выберите</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            </select>
-
-            <p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых игроков линии защиты</p>
-            <select name="selectDefAway" id="selectvalue" class="container__choise-input container__choise-input_select">
-            <option selected value="0">Выберите</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            </select>
-
-            <p class="container__choise-title container__choise-title_mod">*Класс команды</p>
-            <select name="teamClassAway" id="selectvalue" class="container__choise-input container__choise-input_select">
-            <option selected value="1">Выберите</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            </select>
-          </div>
-          <!-- <div class="container__market-menu">
+	<div class="page">
+		<main class="content">
+			<header class="header">
+				<h1 class="header__title">Math2<span class="header__title-span">Bet</span></h1>
+				<h2 class="header__text">Математический расчет исходов на футбол</h2> </header>
+			<form name="formMath" class="container">
+				<div class="container__left-section">
+					<h2 class="container__title">HOME</h2>
+					<div class="container__left-box">
+						<nav class="container__menu" id="menu"> <a class="container__nav-link" href="#">Главная</a> <a class="container__nav-link" href="#">Статьи</a> <a class="container__nav-link" href="#">Math2Beth</a> <a class="container__nav-link" href="#">Прогнозы</a> <a class="container__nav-link" href="#">F.A.Q</a> </nav>
+						<div class="container__left-choise">
+							<p class="container__choise-title">*Кол-во забитых&nbsp;голов команды в последних 5 домашних матчах</p>
+							<input id="homeScored" name="homeScored" type="number" class="container__choise-input" placeholder="Ввести">
+							<p class="container__choise-title">*Кол-во пропущенных голов&nbsp;команды&nbsp;в последних 5 домашних матчах</p>
+							<input id="homeMissed" name="homeMissed" type="number" class="container__choise-input" placeholder="Ввести">
+							<p class="container__choise-title">*Кол-во отсутствующих ключевых&nbsp;игроков атакующей линии</p>
+							<select name="selectAttackHome" id="selectvalue" class="container__choise-input container__choise-input_select">
+								<option selected value="0">Выберите</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+							<p class="container__choise-title">*Кол-во отсутствующих ключевых игроков линии защиты</p>
+							<select name="selectDefHome" id="selectvalue" class="container__choise-input container__choise-input_select">
+								<option selected value="0">Выберите</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+							<p class="container__choise-title">*Класс команды</p>
+							<select name="teamClassHome" id="selectvalue" class="container__choise-input container__choise-input_select">
+								<option selected value="1">Выберите</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="container__right-section">
+					<h2 class="container__title">AWAY</h2>
+					<div class="container__right-box">
+						<div class="container__right-choice">
+							<p class="container__choise-title container__choise-title_mod">*Кол-во забитых&nbsp;голов команды в последних 5 домашних матчах</p>
+							<input id="awayScored" name="awayScored" type="number" class="container__choise-input" placeholder="Ввести">
+							<p class="container__choise-title container__choise-title_mod">*Кол-во пропущенных голов&nbsp;команды&nbsp;в последних 5 домашних матчах</p>
+							<input id="awayMissed" name="awayMissed" type="number" class="container__choise-input" placeholder="Ввести">
+							<p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых&nbsp;игроков атакующей линии</p>
+							<select name="selectAttackAway" id="selectvalue" class="container__choise-input container__choise-input_select">
+								<option selected value="0">Выберите</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+							<p class="container__choise-title container__choise-title_mod">*Кол-во отсутствующих ключевых игроков линии защиты</p>
+							<select name="selectDefAway" id="selectvalue" class="container__choise-input container__choise-input_select">
+								<option selected value="0">Выберите</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+							<p class="container__choise-title container__choise-title_mod">*Класс команды</p>
+							<select name="teamClassAway" id="selectvalue" class="container__choise-input container__choise-input_select">
+								<option selected value="1">Выберите</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+						<!-- <div class="container__market-menu">
             
             <iframe class="container__video" src="https://www.youtube.com/embed/HW9gZ-LyAJI" title="YouTube video player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen></iframe>
-          </div> -->
-        </div>
-    </div>
-  </form>
-    
-    <section class="line">
-      <button type="button" class="math-button">Получить результаты</button>
-      <div class="line__content">
-        <div class="line__result-box">
-          <p class="line__result-text">Самый вероятный счёт</p>
-          <div class="line__result-text-box">
-          <p class="line__result-goalscore"></p>
-         </div>
-        </div>
-      </div>
-      <div class="line__win-draw-win">
-        <div class="line__win-box">
-          <p class="line__win-title">HOME</p>
-          <div class="line__win-title-box">
-          <p class="line__win-persent win-persent"></p>
-          </div>
-        </div>
-        <div class="line__win-box">
-          <p class="line__win-title">DRAW</p>
-          <div class="line__win-title-box">
-          <p class="line__win-persent draw-persent"></p>
-        </div>
-        </div>
-        <div class="line__win-box">
-          <p class="line__win-title line__win-title_mod">AWAY</p>
-          <div class="line__win-title-box">
-          <p class="line__win-persent awayWin-persent"></p>
-          </div>
-        </div>
-      </div>
-      <div class="line__persent-container" id="elem">
-        <div class="line__persent-box">
-          <p class="line__paragraph">Результат матча</p>
-
-          
-            
-            <div class="line__box-line-title">
-              <p class="line__box-line-text_border">Событие</p>
-              <p class="line__box-line-text_border">Вероятность</p>
-              <p class="line__box-line-text_border">Мин. коэфф. для положительного ROI</p>
-            </div>
-
-         
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Победа HOME</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text line-winHome-persent"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a href="https://pmaff.com/?serial=61280826&creative_id=1147&anid=" target="_blank" class="line__box-line-text profit-kef line__box-line-text_link"></a>
-              </div>
-            </div>
-          </div>
-          
-          
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Ничья</p>
-         
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text draw"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a href="https://pmaff.com/?serial=61280826&creative_id=1147&anid=" target="_blank" class="line__box-line-text draw-profit line__box-line-text_link"></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME не проиграет</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text homeX"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a href="https://pmaff.com/?serial=61280826&creative_id=1147&anid=" target="_blank" class="line__box-line-text homeX-profit line__box-line-text_link"></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+          </div> --></div>
+				</div>
+			</form>
+			<section class="line">
+				<button type="button" class="math-button">Получить результаты</button>
+				<div class="line__content">
+					<div class="line__result-box">
+						<p class="line__result-text">Самый вероятный счёт</p>
+						<div class="line__result-text-box">
+							<p class="line__result-goalscore"></p>
+						</div>
+					</div>
+				</div>
+				<div class="line__win-draw-win">
+					<div class="line__win-box">
+						<p class="line__win-title">HOME</p>
+						<div class="line__win-title-box">
+							<p class="line__win-persent win-persent"></p>
+						</div>
+					</div>
+					<div class="line__win-box">
+						<p class="line__win-title">DRAW</p>
+						<div class="line__win-title-box">
+							<p class="line__win-persent draw-persent"></p>
+						</div>
+					</div>
+					<div class="line__win-box">
+						<p class="line__win-title line__win-title_mod">AWAY</p>
+						<div class="line__win-title-box">
+							<p class="line__win-persent awayWin-persent"></p>
+						</div>
+					</div>
+				</div>
+				<div class="line__persent-container" id="elem">
+					<div class="line__persent-box">
+						<p class="line__paragraph">Результат матча</p>
+						<div class="line__box-line-title">
+							<p class="line__box-line-text_border">Событие</p>
+							<p class="line__box-line-text_border">Вероятность</p>
+							<p class="line__box-line-text_border">Мин. коэфф. для положительного ROI</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Победа HOME</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text line-winHome-persent"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a href="https://pmaff.com/?serial=61280826&creative_id=1147&anid=" target="_blank" class="line__box-line-text profit-kef line__box-line-text_link"></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Ничья</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text draw"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a href="https://pmaff.com/?serial=61280826&creative_id=1147&anid=" target="_blank" class="line__box-line-text draw-profit line__box-line-text_link"></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME не проиграет</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text homeX"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a href="https://pmaff.com/?serial=61280826&creative_id=1147&anid=" target="_blank" class="line__box-line-text homeX-profit line__box-line-text_link"></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (0)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text homeNull"></p>
               <p class="line__box-line-text homeNull-profit"></p>
             </div>
           </div>  -->
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (+1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-plusOne"></p>
               <p class="line__box-line-text home-plusOne-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_par">Форы</p>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME с форой (+1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text home-plusOneFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text home-plusOneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_par">Форы</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME с форой (+1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text home-plusOneFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text home-plusOneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (+2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-plusTwo"></p>
               <p class="line__box-line-text home-plusTwo-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME с форой (+2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text home-plusTwoFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text home-plusTwoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME с форой (+2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text home-plusTwoFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text home-plusTwoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (-1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-minusOne"></p>
               <p class="line__box-line-text home-minusOne-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME с форой (-1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text home-minusOneFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text home-minusOneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-           <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME с форой (-1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text home-minusOneFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text home-minusOneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (-2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-minusTwo"></p>
               <p class="line__box-line-text home-minusTwo-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME с форой (-2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text home-minusTwoFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text home-minusTwoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_par">Тоталы</p>
-          </div>
-          
-          
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (0.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-nullFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-nullFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-         
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME с форой (-2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text home-minusTwoFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text home-minusTwoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_par">Тоталы</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (0.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-nullFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-nullFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-one"></p>
               <p class="line__box-line-text totalMore-one-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-oneFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-oneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-oneFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-oneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-two"></p>
               <p class="line__box-line-text totalMore-two-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-twoFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-twoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-twoFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-twoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (3)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-three"></p>
               <p class="line__box-line-text totalMore-three-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (3.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-threeFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-threeFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (3.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-threeFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-threeFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (4)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-four"></p>
               <p class="line__box-line-text totalMOre-four-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (4.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-fourFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-fourFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (4.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-fourFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-fourFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (5)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-five"></p>
               <p class="line__box-line-text totalMore-five-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_par">Остальное</p>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Обе забьют</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text allScored"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text allScored-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-        
-
-      
-   
-
-        </div>       
-
-        <div class="line__persent-box">
-          <p class="line__paragraph">Результат матча</p>
-
-         
-  
-            <div class="line__box-line-title">
-              <p class="line__box-line-text_border">Событие</p>
-              <p class="line__box-line-text_border">Вероятность</p>
-              <p class="line__box-line-text_border">Мин. коэфф. для положительного ROI</p>
-            </div>
-          
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Победа AWAY</p>
-        
-            <div class="line__box-line-box">
-              <div class="line__persent-exel">
-              <p class="line__box-line-text away-win"></p>
-              </div>
-              <div class="line__persent-exel">          
-              <a class="line__box-line-text away-win-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Ничьи не будет</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text notDraw"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text notDraw-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY не проиграет</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text awayX"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text awayX-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_par">Остальное</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Обе забьют</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text allScored"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text allScored-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="line__persent-box">
+						<p class="line__paragraph">Результат матча</p>
+						<div class="line__box-line-title">
+							<p class="line__box-line-text_border">Событие</p>
+							<p class="line__box-line-text_border">Вероятность</p>
+							<p class="line__box-line-text_border">Мин. коэфф. для положительного ROI</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Победа AWAY</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-win"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-win-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Ничьи не будет</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text notDraw"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text notDraw-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY не проиграет</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text awayX"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text awayX-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Away с форой (0)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text awayNull"></p>
               <p class="line__box-line-text awayNull-profit"></p>
             </div>
           </div> -->
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (+1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-plusOne"></p>
               <p class="line__box-line-text away-plusOne-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_par">Форы</p>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY с форой (+1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text away-plusOneFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text away-plusOneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_par">Форы</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY с форой (+1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-plusOneFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-plusOneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (+2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-plusTwo"></p>
               <p class="line__box-line-text away-plusTwo-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY с форой (+2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text away-plusTwoFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text away-plusTwoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY с форой (+2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-plusTwoFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-plusTwoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (-1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-minusOne"></p>
               <p class="line__box-line-text away-minusOne-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY с форой (-1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text away-minusOneFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text away-minusOneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY с форой (-1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-minusOneFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-minusOneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (-2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-minusTwo"></p>
               <p class="line__box-line-text away-minusTwo-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY с форой (-2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text away-minusTwoFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text away-minusTwoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_par">Тоталы</p>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (0.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-nullFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-nullFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-        
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY с форой (-2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-minusTwoFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-minusTwoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_par">Тоталы</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (0.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-nullFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-nullFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-one"></p>
               <p class="line__box-line-text totalLess-one-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-oneFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-oneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-oneFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-oneFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-two"></p>
               <p class="line__box-line-text totalLess-two-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-twoFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-twoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-twoFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-twoFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (3)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-three"></p>
               <p class="line__box-line-text totalLess-three-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (3.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-threeFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-threeFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (3.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-threeFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-threeFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (4)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-four"></p>
               <p class="line__box-line-text totalLess-four-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (4.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-fourFive"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-fourFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (4.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-fourFive"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-fourFive-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (5)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-five"></p>
               <p class="line__box-line-text totalLess-five-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_par">Остальное</p>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Хотя бы одна не забьёт</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text notAllScored"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text notAllScored-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-
-        </div>
-      </div>
-
-      <div class="line__persent-container_mod" id="mobile">
-        <div class="line__persent-box_mod">
-          <p class="line__paragraph">Результат матча</p>
-
-          
-            
-            <div class="line__box-line-title">
-              <p class="line__box-line-text_border">Событие</p>
-              <p class="line__box-line-text_border">Вероятность</p>
-              <p class="line__box-line-text_border">Мин. коэфф. для положительного ROI</p>
-            </div>
-
-            <!-- <div class="line__box-line line__box-line">
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_par">Остальное</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Хотя бы одна не забьёт</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text notAllScored"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text notAllScored-profit line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line__persent-container_mod" id="mobile">
+					<div class="line__persent-box_mod">
+						<p class="line__paragraph">Результат матча</p>
+						<div class="line__box-line-title">
+							<p class="line__box-line-text_border">Событие</p>
+							<p class="line__box-line-text_border">Вероятность</p>
+							<p class="line__box-line-text_border">Мин. коэфф. для положительного ROI</p>
+						</div>
+						<!-- <div class="line__box-line line__box-line">
               <p class="line__paragraph line__paragraph_mod">Исходы</p>
             </div> -->
-
-         
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Победа HOME</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text line-winHome-persent_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a href="#" class="line__box-line-text profit-kef_mod line__box-line-text_link"></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Победа AWAY</p>
-        
-            <div class="line__box-line-box">
-              <div class="line__persent-exel">
-              <p class="line__box-line-text away-win_mod"></p>
-              </div>
-              <div class="line__persent-exel">          
-              <a class="line__box-line-text away-win-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Ничья</p>
-         
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text draw_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a href="#" class="line__box-line-text draw-profit_mod line__box-line-text_link"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Ничьи не будет</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text notDraw_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text notDraw-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME не проиграет</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text homeX_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a href="#" class="line__box-line-text homeX-profit_mod line__box-line-text_link"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY не проиграет</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text awayX_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text awayX-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Победа HOME</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text line-winHome-persent_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a href="#" class="line__box-line-text profit-kef_mod line__box-line-text_link"></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Победа AWAY</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-win_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-win-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Ничья</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text draw_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a href="#" class="line__box-line-text draw-profit_mod line__box-line-text_link"></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Ничьи не будет</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text notDraw_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text notDraw-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME не проиграет</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text homeX_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a href="#" class="line__box-line-text homeX-profit_mod line__box-line-text_link"></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY не проиграет</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text awayX_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text awayX-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (0)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text homeNull"></p>
               <p class="line__box-line-text homeNull-profit"></p>
             </div>
           </div>  -->
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (+1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-plusOne"></p>
               <p class="line__box-line-text home-plusOne-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_mod">Форы</p>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME с форой (+1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text home-plusOneFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text home-plusOneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_mod">Форы</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME с форой (+1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text home-plusOneFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text home-plusOneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (+2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-plusTwo"></p>
               <p class="line__box-line-text home-plusTwo-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME с форой (+2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text home-plusTwoFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text home-plusTwoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME с форой (+2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text home-plusTwoFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text home-plusTwoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (-1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-minusOne"></p>
               <p class="line__box-line-text home-minusOne-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME с форой (-1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text home-minusOneFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text home-minusOneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-           <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME с форой (-1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text home-minusOneFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text home-minusOneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">HOME с форой (-2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text home-minusTwo"></p>
               <p class="line__box-line-text home-minusTwo-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">HOME с форой (-2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text home-minusTwoFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text home-minusTwoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY с форой (+1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text away-plusOneFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text away-plusOneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY с форой (+2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text away-plusTwoFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text away-plusTwoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY с форой (-1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text away-minusOneFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text away-minusOneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">AWAY с форой (-2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text away-minusTwoFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text away-minusTwoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-          
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_mod">Тоталы</p>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (0.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-nullFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-nullFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (0.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-nullFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-nullFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-        
-         
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">HOME с форой (-2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text home-minusTwoFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text home-minusTwoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY с форой (+1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-plusOneFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-plusOneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY с форой (+2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-plusTwoFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-plusTwoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY с форой (-1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-minusOneFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-minusOneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">AWAY с форой (-2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text away-minusTwoFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text away-minusTwoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_mod">Тоталы</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (0.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-nullFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-nullFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (0.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-nullFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-nullFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-one"></p>
               <p class="line__box-line-text totalMore-one-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-oneFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-oneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (1.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-oneFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-oneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-oneFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-oneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (1.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-oneFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-oneFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-two"></p>
               <p class="line__box-line-text totalMore-two-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-twoFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-twoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (2.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-twoFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-twoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-twoFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-twoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (2.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-twoFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-twoFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (3)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-three"></p>
               <p class="line__box-line-text totalMore-three-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (3.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-threeFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-threeFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (3.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-threeFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-threeFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (3.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-threeFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-threeFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (3.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-threeFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-threeFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (4)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-four"></p>
               <p class="line__box-line-text totalMOre-four-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал больше (4.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalMore-fourFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalMore-fourFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              
-              </div>
-            </div>
-          </div>
-          
-          <div class="line__box-line">
-            <p class="line__box-line-text">Тотал меньше (4.5)</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text totalLess-fourFive_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text totalLess-fourFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал больше (4.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalMore-fourFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalMore-fourFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Тотал меньше (4.5)</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text totalLess-fourFive_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text totalLess-fourFive-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал больше (5)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalMore-five"></p>
               <p class="line__box-line-text totalMore-five-profit"></p>
             </div>
           </div> -->
-
-          <div class="line__box-line line__box-line">
-            <p class="line__paragraph line__paragraph_mod">Остальное</p>
-          </div>
-
-          <div class="line__box-line">
-            <p class="line__box-line-text">Обе забьют</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text allScored_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text allScored-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-        
-          <div class="line__box-line">
-            <p class="line__box-line-text">Хотя бы одна не забьёт</p>
-          
-
-            <div class="line__box-line-box">
-              <div class="line__persent-exel"> 
-              <p class="line__box-line-text notAllScored_mod"></p>
-              </div>
-              <div class="line__persent-exel"> 
-              <a class="line__box-line-text notAllScored-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
-              </div>
-            </div>
-          </div>
-
-
-      
-   
-
-        <!-- </div>        -->
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          <!-- <div class="line__box-line">
+						<div class="line__box-line line__box-line">
+							<p class="line__paragraph line__paragraph_mod">Остальное</p>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Обе забьют</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text allScored_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text allScored-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<div class="line__box-line">
+							<p class="line__box-line-text">Хотя бы одна не забьёт</p>
+							<div class="line__box-line-box">
+								<div class="line__persent-exel">
+									<p class="line__box-line-text notAllScored_mod"></p>
+								</div>
+								<div class="line__persent-exel">
+									<a class="line__box-line-text notAllScored-profit_mod line__box-line-text_link" target="_blank" href="https://pmaff.com/?serial=61280826&creative_id=1147&anid="></a>
+								</div>
+							</div>
+						</div>
+						<!-- </div>        -->
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Away с форой (0)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text awayNull"></p>
               <p class="line__box-line-text awayNull-profit"></p>
             </div>
           </div> -->
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (+1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-plusOne"></p>
               <p class="line__box-line-text away-plusOne-profit"></p>
             </div>
           </div> -->
-
-          
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (+2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-plusTwo"></p>
               <p class="line__box-line-text away-plusTwo-profit"></p>
             </div>
           </div> -->
-
-          
-          
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (-1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-minusOne"></p>
               <p class="line__box-line-text away-minusOne-profit"></p>
             </div>
           </div> -->
-
-          
-          
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">AWAY с форой (-2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text away-minusTwo"></p>
               <p class="line__box-line-text away-minusTwo-profit"></p>
             </div>
           </div> -->
-
-          
-          
-
-          
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (1)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-one"></p>
               <p class="line__box-line-text totalLess-one-profit"></p>
             </div>
           </div> -->
-
-          
-          
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (2)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-two"></p>
               <p class="line__box-line-text totalLess-two-profit"></p>
             </div>
           </div> -->
-
-          
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (3)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-three"></p>
               <p class="line__box-line-text totalLess-three-profit"></p>
             </div>
           </div> -->
-
-          
-          
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (4)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-four"></p>
               <p class="line__box-line-text totalLess-four-profit"></p>
             </div>
           </div> -->
-
-          
-
-          <!-- <div class="line__box-line">
+						<!-- <div class="line__box-line">
             <p class="line__box-line-text">Тотал меньше (5)</p>
             <div class="line__box-line-box">
               <p class="line__box-line-text totalLess-five"></p>
               <p class="line__box-line-text totalLess-five-profit"></p>
             </div>
           </div> -->
+			</section>
+			<footer class="footer">
+				<p class="footer__text">© 2022 Math2<span class="header__title-span">Bet</span></p>
+			</footer>
+		</main>
+		</div>
+		<script src="scripts/index.js"></script>
+</body>
 
-          
-    </section>
-
-    <footer class="footer">
-      <p class="footer__text">© 2022 Math2<span class="header__title-span">Bet</span></p>
-    </footer>
-    
-
-
-
-
-
-
-
-
-    
-      
-    
-    
-    
-    
-    
-    
-    </main>
-    </div>
-    <script src="scripts/index.js"></script>
-  </body>
 </html>
