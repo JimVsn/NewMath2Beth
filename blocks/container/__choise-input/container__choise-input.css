@@ -9,15 +9,16 @@
 
 @media screen and (max-width: 700px) {
   .container__choise-input {
-    width: 70px;
+    width: 100px;
     height: 35px;
     padding: 0;
-    font-size: 7px;
-    line-height: 9px;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
   }
 
   .container__choise-input::placeholder {
-    font-size: 9px;
-    line-height: 10px;
+    font-size: 15px;
+    line-height: 16px;
   }
 }
